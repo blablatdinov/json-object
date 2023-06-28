@@ -1,5 +1,5 @@
 [tool.poetry]
-name = "json-object"
+name = "eljson"
 description = "This is how python package should look like!"
 version = "0.1.0"
 license = "MIT"
@@ -8,7 +8,7 @@ authors = ['Almaz Ilaletdinov <a.ilaletdinov@yandex.ru>']
 
 readme = "README.md"
 
-repository = "https://github.com/blablatdinov/json-object"
+repository = "https://github.com/blablatdinov/eljson"
 
 keywords = []
 
