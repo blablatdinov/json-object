@@ -1,7 +1,7 @@
 # json-object
 
-[![Build Status](https://github.com/a.ilaletdinov/json-object/workflows/test/badge.svg?branch=master&event=push)](https://github.com/a.ilaletdinov/json-object/actions?query=workflow%3Atest)
-[![codecov](https://codecov.io/gh/a.ilaletdinov/json-object/branch/master/graph/badge.svg)](https://codecov.io/gh/a.ilaletdinov/json-object)
+[![Build Status](https://github.com/blablatdinov/json-object/workflows/test/badge.svg?branch=master&event=push)](https://github.com/blablatdinov/json-object/actions?query=workflow%3Atest)
+[![codecov](https://codecov.io/gh/blablatdinov/json-object/branch/master/graph/badge.svg)](https://codecov.io/gh/ablablatdinovjson-object)
 [![Python Version](https://img.shields.io/pypi/pyversions/json-object.svg)](https://pypi.org/project/json-object/)
 [![wemake-python-styleguide](https://img.shields.io/badge/style-wemake-000000.svg)](https://github.com/wemake-services/wemake-python-styleguide)
 
@@ -34,7 +34,7 @@ print(some_function(3, 4))
 
 ## License
 
-[MIT](https://github.com/a.ilaletdinov/json-object/blob/master/LICENSE)
+[MIT](https://github.com/blablatdinov/json-object/blob/master/LICENSE)
 
 
 ## Credits

@@ -4,11 +4,11 @@ description = "This is how python package should look like!"
 version = "0.1.0"
 license = "MIT"
 
-authors = []
+authors = ['Almaz Ilaletdinov <a.ilaletdinov@yandex.ru>']
 
 readme = "README.md"
 
-repository = "https://github.com/a.ilaletdinov/json-object"
+repository = "https://github.com/blablatdinov/json-object"
 
 keywords = []
 
@@ -20,31 +20,19 @@ classifiers = [
 ]
 
 [tool.poetry.dependencies]
-python = "^3.8"
+python = ">=3.8.1,<4.0"
+attrs = "^20.1"
+jsonschema = "^4.17"
+jsonpath-ng = "^1.5"
 
 [tool.poetry.group.test.dependencies]
 mypy = "^1.4"
-
-wemake-python-styleguide = "^0.17"
+wemake-python-styleguide = "0.18.0"
 flake8-pytest-style = "^1.6"
-nitpick = "^0.33"
-
-safety = "^2.3"
-
 pytest = "^7.4"
 pytest-cov = "^4.1"
 pytest-randomly = "^3.12"
-
-[tool.poetry.group.docs]
-optional = true
-
-[tool.poetry.group.docs.dependencies]
-sphinx = "^7.0"
-sphinx-autodoc-typehints = "^1.23"
-m2r2 = "^0.3"
-tomli = "^2.0"
-doc8 = "^1.0"
-
+flake8-copyright = "0.2.4"
 
 [build-system]
 requires = ["poetry-core>=1.5.0"]
