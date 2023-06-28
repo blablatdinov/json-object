@@ -20,19 +20,30 @@ DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR
 OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE
 OR OTHER DEALINGS IN THE SOFTWARE.
 """
+from pathlib import Path
+
+import pytest
+from jsonschema import ValidationError
+
+from eljson.json_doc import JsonDoc
+from eljson.strict_json import StrictJson
 
 
-def some_function(first: int, second: int) -> int:
-    """
-    We use this function as an example for some real logic.
+def test_validation():
+    """Test validating json document by json-schema."""
+    json_doc = JsonDoc.from_string('{"hello": {"world": "!"}}')
+    got = StrictJson.from_string(
+        json_doc,
+        (Path(__file__).parent / 'fixtures' / 'valid_shm.json').read_text(),
+    ).path('$')
 
-    This is how you can write a doctest:
+    assert got == json_doc.path('$')
 
-    .. code:: python
 
-        >>> some_function(2, 3)
-        5
-
-    Enjoy!
-    """
-    return first + second
+def test_fail_validation():
+    """Test fail validation."""
+    with pytest.raises(ValidationError):
+        StrictJson.from_string(
+            JsonDoc.from_string('{"hello": {"world": "!"}}'),
+            (Path(__file__).parent / 'fixtures' / 'invalid_shm.json').read_text(),
+        ).path('$')

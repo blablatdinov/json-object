@@ -20,17 +20,11 @@ DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR
 OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE
 OR OTHER DEALINGS IN THE SOFTWARE.
 """
-import pytest
-
-from json_object.example import some_function
+from typing import Protocol
 
 
-@pytest.mark.parametrize(('first', 'second', 'expected'), [
-    (1, 2, 3),
-    (2, 4, 6),
-    (-2, -3, -5),
-    (-5, 5, 0),
-])
-def test_some_function(first, second, expected):
-    """Example test with parametrization."""
-    assert some_function(first, second) == expected
+class Json(Protocol):
+    """Json interface."""
+
+    def path(self, query: str):
+        """Fetch nodes from json by jsonpath."""

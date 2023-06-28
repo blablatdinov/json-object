@@ -2,7 +2,7 @@ SHELL:=/usr/bin/env bash
 
 .PHONY: lint
 lint:
-	poetry run mypy json_object tests/**/*.py
+	poetry run mypy eljson tests/*.py
 	poetry run flake8 .
 	if poetry run command -v doc8 > /dev/null 2>&1; then poetry run doc8 -q docs; fi
 

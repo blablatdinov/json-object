@@ -12,7 +12,6 @@ This is how python package should look like!
 
 ## Features
 
-- Fully typed with annotations and checked with mypy, [PEP561 compatible](https://www.python.org/dev/peps/pep-0561/)
 - Object oriented work with `JSON`
 
 
@@ -29,7 +28,7 @@ pip install elson
 from elson.strict_json import StrictJson
 from elson.json import JsonDoc
 
-StrictJson(
+StrictJson.from_string(
     JsonDoc.from_string(
         '{"hello": {"world": "!"}}',
     ),
@@ -39,20 +38,14 @@ StrictJson(
         "type": "object",
         "properties": {
             "hello": {
-            "type": "object",
-            "properties": {
-                "world": {
-                "type": "string"
-                }
-            },
-            "required": [
-                "world"
-            ]
+                "type": "object",
+                "properties": {
+                    "world": {"type": "string"}
+                },
+                "required": ["world"]
             }
         },
-        "required": [
-            "hello"
-        ]
+        "required": ["hello"]
     }
     """,
 ).path('$.hello.world')

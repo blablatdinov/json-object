@@ -46,7 +46,7 @@ We use `mypy` to run type checks on our code.
 To use it:
 
 ```bash
-mypy json_object tests/**/*.py
+mypy eljson tests/**/*.py
 ```
 
 This step is mandatory during the CI.

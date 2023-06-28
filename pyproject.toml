@@ -1,7 +1,7 @@
 [tool.poetry]
 name = "eljson"
 description = "This is how python package should look like!"
-version = "0.1.0"
+version = "0.0.1-alpha1"
 license = "MIT"
 
 authors = ['Almaz Ilaletdinov <a.ilaletdinov@yandex.ru>']
@@ -21,9 +21,10 @@ classifiers = [
 
 [tool.poetry.dependencies]
 python = ">=3.8.1,<4.0"
-attrs = "^20.1"
+attrs = "^23.1"
 jsonschema = "^4.17"
 jsonpath-ng = "^1.5"
+ujson = "^5"
 
 [tool.poetry.group.test.dependencies]
 mypy = "^1.4"
@@ -33,6 +34,10 @@ pytest = "^7.4"
 pytest-cov = "^4.1"
 pytest-randomly = "^3.12"
 flake8-copyright = "0.2.4"
+
+
+[tool.poetry.group.dev.dependencies]
+types-ujson = "^5.8.0.0"
 
 [build-system]
 requires = ["poetry-core>=1.5.0"]
