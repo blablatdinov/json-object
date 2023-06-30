@@ -18,7 +18,7 @@ This is how python package should look like!
 ## Installation
 
 ```bash
-pip install elson
+pip install eljson
 ```
 
 
