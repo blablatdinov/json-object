@@ -18,15 +18,15 @@ This is how python package should look like!
 ## Installation
 
 ```bash
-pip install elson
+pip install eljson
 ```
 
 
 ## Example
 
 ```python
-from elson.strict_json import StrictJson
-from elson.json import JsonDoc
+from eljson.strict_json import StrictJson
+from eljson.json import JsonDoc
 
 StrictJson.from_string(
     JsonDoc.from_string(
