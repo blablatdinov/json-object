@@ -26,7 +26,7 @@ pip install eljson
 
 ```python
 from eljson.strict_json import StrictJson
-from eljson.json import JsonDoc
+from eljson.json_doc import JsonDoc
 
 StrictJson.from_string(
     JsonDoc.from_string(
