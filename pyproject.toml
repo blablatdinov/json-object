@@ -1,7 +1,7 @@
 [tool.poetry]
 name = "eljson"
 description = "This is how python package should look like!"
-version = "0.0.1-alpha1"
+version = "0.0.1"
 license = "MIT"
 
 authors = ['Almaz Ilaletdinov <a.ilaletdinov@yandex.ru>']
