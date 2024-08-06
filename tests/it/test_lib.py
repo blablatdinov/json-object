@@ -20,18 +20,16 @@
 # OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE
 # OR OTHER DEALINGS IN THE SOFTWARE.
 
+# flake8: noqa: S603, S607. Not a production code
+
 import os
 import subprocess
-import zipfile
 from collections.abc import Generator
 from pathlib import Path
-from typing import Callable
-from unittest.mock import patch
 from shutil import copytree
 
 import pytest
 from _pytest.legacypath import TempdirFactory
-from typing_extensions import TypeAlias
 
 
 @pytest.fixture(scope='module')
