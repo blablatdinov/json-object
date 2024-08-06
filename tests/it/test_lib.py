@@ -41,7 +41,7 @@ def current_dir() -> Path:
 
 
 @pytest.fixture(scope='module')
-def _test_repo(tmpdir_factory: TempdirFactory, current_dir: str) -> Generator[None, None, None]:
+def _test_repo(tmpdir_factory: TempdirFactory, current_dir: Path) -> Generator[None, None, None]:
     """Real git repository."""
     tmp_path = tmpdir_factory.mktemp('eljson_test_dir')
     os.chdir(tmp_path)

@@ -35,10 +35,10 @@ from eljson.json import Json
 class JsonDoc(Json):
     """Json document."""
 
-    _json: dict
+    _json: dict  # type: ignore
 
     @classmethod
-    def from_string(cls, raw_json):
+    def from_string(cls, raw_json) -> Json:
         """Ctor for strings."""
         return cls(ujson.loads(raw_json))
 
