@@ -34,7 +34,7 @@ def test_validation():
     json_doc = JsonDoc.from_string('{"hello": {"world": "!"}}')
     got = StrictJson.from_string(
         json_doc,
-        (Path(__file__).parent / 'fixtures' / 'valid_shm.json').read_text(),
+        (Path(__file__).parent.parent / 'fixtures' / 'valid_shm.json').read_text(),
     ).path('$')
 
     assert got == json_doc.path('$')
@@ -45,5 +45,5 @@ def test_fail_validation():
     with pytest.raises(ValidationError):
         StrictJson.from_string(
             JsonDoc.from_string('{"hello": {"world": "!"}}'),
-            (Path(__file__).parent / 'fixtures' / 'invalid_shm.json').read_text(),
+            (Path(__file__).parent.parent / 'fixtures' / 'invalid_shm.json').read_text(),
         ).path('$')
