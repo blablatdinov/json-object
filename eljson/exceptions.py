@@ -21,6 +21,5 @@
 # OR OTHER DEALINGS IN THE SOFTWARE.
 
 
-
 class NodeNotFoundError(KeyError):
     """Error that raises if node by path not founded."""

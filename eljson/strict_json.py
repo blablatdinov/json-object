@@ -35,10 +35,10 @@ class StrictJson(Json):
     """Json document validated by json-schema."""
 
     _origin: Json
-    _json_schema: dict
+    _json_schema: dict  # type: ignore
 
     @classmethod
-    def from_string(cls, origin: Json, raw_json: str):
+    def from_string(cls, origin: Json, raw_json: str) -> Json:
         """Ctor for strings."""
         return cls(origin, ujson.loads(raw_json))
 
